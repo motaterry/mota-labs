@@ -1,0 +1,5 @@
+{
+  "installCommand": "npm ci --prefix mota-labs-web",
+  "buildCommand": "npm run build --prefix mota-labs-web",
+  "outputDirectory": "mota-labs-web/out"
+}
