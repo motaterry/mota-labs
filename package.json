@@ -1,5 +1,5 @@
 {
-  "name": "stitch",
+  "name": "mota-labs",
   "private": true,
   "scripts": {
     "dev": "npm run dev --prefix mota-labs-web",

@@ -1,4 +1,4 @@
-# Use this workflow when the Git repository root is the `stitch` folder (this workspace),
+# Use this workflow when the Git repository root is the `mota-labs` repo (this workspace),
 # not `mota-labs-web` alone. It builds mota-labs-web/ and deploys its out/ to GitHub Pages.
 
 name: Deploy Mota Labs (GitHub Pages)
