@@ -29,7 +29,8 @@ export default function BentoBox() {
 
       {/* Manifesto Block (Cols 1-6, Rows 2-3) */}
       <section
-        className="min-w-0 md:col-span-6 md:row-span-3 md:row-start-2 border-b-2 md:border-r-2 border-primary-container p-6 md:p-12 flex flex-col justify-between gap-8"
+        className="min-w-0 md:col-span-6 md:row-span-3 md:row-start-2 border-b-2 md:border-r-2 border-primary-container flex flex-col justify-between gap-8"
+        style={{ padding: "24px" }}
         aria-labelledby="titulo-manifesto"
       >
         <h1
@@ -54,7 +55,8 @@ export default function BentoBox() {
 
       {/* Services Block (Cols 7-12, Row 2) */}
       <section
-        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-2 border-b-2 border-primary-container p-8 group hover:bg-primary-container/20 transition-none cursor-default flex flex-col justify-between"
+        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-2 border-b-2 border-primary-container group hover:bg-primary-container/20 transition-none cursor-default flex flex-col justify-between"
+        style={{ padding: "24px" }}
         aria-labelledby="titulo-servicos"
       >
         <div className="mb-6 flex min-w-0 items-start justify-between gap-3">
@@ -80,7 +82,8 @@ export default function BentoBox() {
 
       {/* Privacy Block (Cols 7-9, Row 3) — fundo verde, rosa a 20% só na lavagem (camada) */}
       <section
-        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-3 border-b-2 border-primary-container bg-[linear-gradient(rgba(243,121,122,0.2),rgba(243,121,122,0.2)),#224225] transition-none cursor-default p-8 flex flex-col justify-between"
+        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-3 border-b-2 border-primary-container bg-[linear-gradient(rgba(243,121,122,0.2),rgba(243,121,122,0.2)),#224225] transition-none cursor-default flex flex-col justify-between"
+        style={{ padding: "24px" }}
         aria-labelledby="titulo-privacidade"
       >
         <div className="mb-4 flex min-w-0 items-start justify-between gap-3">
@@ -107,7 +110,8 @@ export default function BentoBox() {
       {/* Contact Block (Cols 10-12, Row 3) */}
       <a
         href="mailto:contato@motalabs.com.br"
-        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-4 border-b-2 border-primary-container p-6 group hover:bg-primary-container/20 transition-none cursor-pointer flex flex-col justify-between no-underline"
+        className="min-w-0 md:col-span-6 md:col-start-7 md:row-start-4 border-b-2 border-primary-container group hover:bg-primary-container/20 transition-none cursor-pointer flex flex-col justify-between no-underline"
+        style={{ padding: "24px" }}
         aria-labelledby="titulo-contato"
         aria-describedby="email-contato prazo-resposta"
       >
@@ -147,7 +151,10 @@ export default function BentoBox() {
       </a>
 
       {/* Footer Row (Col 1-12) */}
-      <footer className="min-w-0 md:col-span-12 md:row-start-5 p-6 md:px-12 flex flex-col md:flex-row md:flex-wrap md:justify-between md:items-center gap-4 font-meta text-meta text-primary uppercase bg-[#224225]">
+      <footer
+        className="min-w-0 md:col-span-12 md:row-start-5 flex flex-col md:flex-row md:flex-wrap md:justify-between md:items-center gap-4 font-meta text-meta text-primary uppercase bg-[#224225]"
+        style={{ padding: "24px" }}
+      >
         <p className="min-w-0 text-center md:text-left [overflow-wrap:break-word] text-pretty">
           © 2026 MOTA LABS LTDA. TODOS OS DIREITOS RESERVADOS.
         </p>

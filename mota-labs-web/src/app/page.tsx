@@ -2,7 +2,10 @@ import BentoBox from "@/components/BentoBox";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center relative overflow-x-hidden p-4 md:p-8">
+    <div
+      className="flex flex-col min-h-screen justify-center items-center relative overflow-x-hidden"
+      style={{ padding: "24px" }}
+    >
       {/* Background Grid Layer */}
       <div className="fixed inset-0 grid-overlay -z-10 pointer-events-none"></div>
       
