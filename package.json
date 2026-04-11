@@ -1,0 +1,11 @@
+{
+  "name": "stitch",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix mota-labs-web",
+    "dev:clean": "npm run dev:clean --prefix mota-labs-web",
+    "build": "npm run build --prefix mota-labs-web",
+    "start": "npm run start --prefix mota-labs-web",
+    "lint": "npm run lint --prefix mota-labs-web"
+  }
+}

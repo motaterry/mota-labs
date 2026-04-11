@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MOTA LABS | Software com acabamento humano</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#F3797A",
+                    "on-primary": "#224225",
+                    "background": "#172b19",
+                    "surface": "#224225",
+                    "primary-container": "#F3797A",
+                    "on-surface": "#F3797A",
+                    "surface-variant": "#F3797A",
+                    "outline": "#F3797A"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "0px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #172b19;
+            color: #F3797A;
+        }
+        /* Custom Grid Overlay */
+        .grid-overlay {
+            background-image: linear-gradient(to right, rgba(243, 121, 122, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(243, 121, 122, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        /* Mantém texto dentro de células flex/grid sem estourar horizontalmente;
+           evita "anywhere" que parte palavras no meio em tablets */
+        .bento-tile {
+            min-width: 0;
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+        /* Título do tile e ícone: mesma escala tipográfica (altura ≈ font-size do título) */
+        :root {
+            --service-tile-title-size: clamp(1.5rem, 2.2vw + 1rem, 2.25rem);
+        }
+        .service-tile-title {
+            font-size: var(--service-tile-title-size);
+        }
+        .service-tile-icon {
+            width: var(--service-tile-title-size);
+            height: var(--service-tile-title-size);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary min-h-screen flex flex-col">
+<!-- TopNavBar - No navigation links as requested -->
+<nav class="bg-[#224225] border-b-2 border-primary fixed top-0 w-full z-50 flex justify-between items-center gap-4 px-4 sm:px-8 py-4 h-20 min-w-0">
+<div class="flex items-center">
+<img src="logo.svg" alt="Mota Labs" width="40" height="40" class="h-10 w-auto" />
+</div>
+<div>
+<a class="bg-primary text-[#224225] font-headline font-bold px-4 sm:px-6 py-2 text-sm sm:text-base uppercase tracking-tighter hover:bg-white transition-none shrink-0 text-center" href="mailto:contato@motalabs.com.br">
+            CONTATO
+        </a>
+</div>
+</nav>
+<main class="flex-grow grid-overlay relative pt-20">
+<!-- Hero Section: Exactly 100vh -->
+<section class="h-[calc(100vh-80px)] border-b-2 border-primary-container flex flex-col md:flex-row overflow-hidden min-h-0">
+<!-- Left: Geometric Wordmark Area -->
+<div class="w-full md:w-1/2 min-w-0 border-r-0 md:border-r-2 border-primary-container p-6 sm:p-8 md:p-16 flex flex-col justify-between h-full min-h-0 overflow-hidden">
+<div>
+<h1 class="text-[clamp(1.75rem,5.5vw+0.5rem,5rem)] font-headline font-black text-primary-container leading-[0.9] uppercase tracking-tighter break-words hyphens-auto">
+                    SOFTWARE COM<br/>ACABAMENTO<br/>HUMANO
+                </h1>
+<p class="mt-2 text-on-surface/80 font-headline text-xs md:text-sm uppercase tracking-widest">MOTA LABS LTDA</p>
+<p class="mt-8 text-on-surface font-label uppercase tracking-widest text-sm md:text-base max-w-full md:max-w-md leading-relaxed break-words">
+                    Desenvolvemos software com foco em estabilidade, clareza e uso contínuo. Cada detalhe é construído com atenção e refinado com o tempo.
+                </p>
+</div>
+<div class="mt-12 md:mt-0">
+<div class="grid grid-cols-6 grid-rows-6 w-32 h-32 md:w-48 md:h-48 border border-primary-container/30">
+<div class="bg-primary-container"></div><div></div><div class="bg-primary-container/20"></div><div></div><div></div><div class="bg-primary-container"></div>
+<div></div><div class="bg-primary-container"></div><div></div><div></div><div class="bg-primary-container/40"></div><div></div>
+<div class="bg-primary-container/10"></div><div></div><div class="bg-primary-container"></div><div></div><div></div><div class="bg-primary-container/60"></div>
+<div></div><div></div><div class="bg-primary-container/20"></div><div class="bg-primary-container"></div><div></div><div></div>
+<div class="bg-primary-container/50"></div><div class="bg-primary-container"></div><div></div><div></div><div class="bg-primary-container"></div><div></div>
+<div></div><div></div><div class="bg-primary-container"></div><div></div><div></div><div class="bg-primary-container"></div>
+</div>
+</div>
+</div>
+<!-- Right: Oversized Geometric Placeholder -->
+<div class="w-full md:w-1/2 min-w-0 bg-[#224225] flex items-center justify-center relative overflow-hidden p-4 sm:p-8 h-full min-h-0">
+<div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none overflow-hidden">
+<span class="font-black font-headline text-primary-container leading-none select-none whitespace-nowrap text-[clamp(6rem,min(55vw,40vh),30rem)] max-w-full">ML</span>
+</div>
+<!-- Abstract Rectangular Composition -->
+<div class="relative z-10 w-full h-full min-h-0 min-w-0 flex flex-col gap-2 sm:gap-4">
+<div class="min-h-[4rem] flex-[1_1_33%] w-full min-w-0 bg-primary-container"></div>
+<div class="flex-[2_1_66%] w-full min-h-0 min-w-0 flex gap-2 sm:gap-4">
+<div class="w-1/2 min-w-0 min-h-0 border-2 border-primary-container"></div>
+<div class="w-1/2 min-w-0 min-h-0 flex flex-col gap-2 sm:gap-4">
+<div class="flex-1 min-h-0 min-w-0 bg-primary"></div>
+<div class="flex-1 min-h-0 min-w-0 border-2 border-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: bento — em xl+ largura máx. max-w-3xl (~768px), cards alinhados ao tablet no desktop -->
+<section class="flex flex-col md:flex-row w-full min-h-0 md:min-h-[500px] xl:max-w-3xl xl:mx-auto 2xl:max-w-3xl">
+<!-- Tile: O que fazemos -->
+<div class="bento-tile flex-1 min-w-0 border-b-2 md:border-b-0 md:border-r-2 border-primary-container group hover:bg-primary-container/20 transition-none cursor-default flex flex-col">
+<div class="p-6 sm:p-8 flex justify-between items-center gap-4 min-w-0">
+<span class="font-headline text-3xl sm:text-4xl font-black text-primary-container leading-none shrink-0">01</span>
+<img src="icones/o-que-fazemos.svg" alt="" class="service-tile-icon shrink-0 object-contain" aria-hidden="true" />
+</div>
+<div class="mt-auto p-6 sm:p-8 min-w-0">
+<h3 class="service-tile-title font-headline font-black text-primary-container uppercase leading-[0.95] tracking-tight text-pretty">O QUE FAZEMOS</h3>
+<p class="mt-4 text-on-surface font-label text-xs uppercase tracking-widest leading-relaxed text-pretty">
+                    Aplicativos próprios, testados no uso real. Evolução contínua guiada por quem utiliza. Inclui o Serpentime (App Store).
+                </p>
+<a class="inline-block mt-6 text-xs font-bold border-b-2 border-primary uppercase tracking-widest max-w-full text-pretty" href="https://apps.apple.com/">Ver na App Store</a>
+</div>
+</div>
+<!-- Tile: Privacidade -->
+<div class="bento-tile flex-1 min-w-0 border-b-2 md:border-b-0 md:border-r-2 border-primary-container bg-[linear-gradient(rgba(243,121,122,0.2),rgba(243,121,122,0.2)),#224225] transition-none cursor-default flex flex-col">
+<div class="p-6 sm:p-8 flex justify-between items-center gap-4 min-w-0">
+<span class="font-headline text-3xl sm:text-4xl font-black text-primary-container leading-none shrink-0">02</span>
+<img src="icones/privacidade.svg" alt="" class="service-tile-icon shrink-0 object-contain" aria-hidden="true" />
+</div>
+<div class="mt-auto p-6 sm:p-8 min-w-0">
+<h3 class="service-tile-title font-headline font-black text-primary-container uppercase leading-[0.95] tracking-tight text-pretty">PRIVACIDADE</h3>
+<p class="mt-4 text-on-surface font-label text-xs uppercase tracking-widest leading-relaxed text-pretty">
+                    Dados tratados apenas quando necessário. Não vendemos informações. Para detalhes, consulte a nossa <a class="underline decoration-1 underline-offset-2" href="#">Política de Privacidade</a>.
+                </p>
+</div>
+</div>
+<!-- Tile: Contato -->
+<div class="bento-tile flex-1 min-w-0 group hover:bg-primary-container/20 transition-none cursor-pointer flex flex-col" id="contact" onclick="window.location.href='mailto:contato@motalabs.com.br'">
+<div class="p-6 sm:p-8 flex justify-between items-center gap-4 min-w-0">
+<span class="font-headline text-3xl sm:text-4xl font-black text-primary-container leading-none shrink-0">03</span>
+<img src="icones/contato.svg" alt="" class="service-tile-icon shrink-0 object-contain" aria-hidden="true" />
+</div>
+<div class="mt-auto p-6 sm:p-8 min-w-0">
+<h3 class="service-tile-title font-headline font-black text-primary-container uppercase leading-[0.95] tracking-tight text-pretty">CONTATO</h3>
+<div class="mt-4 min-w-0">
+<p class="text-on-surface font-label text-xs uppercase tracking-widest min-w-0 [overflow-wrap:break-word] [word-break:break-word]">contato@motalabs.com.br</p>
+<p class="mt-2 text-on-surface/60 font-label text-[10px] uppercase tracking-widest leading-snug text-pretty">RESPOSTA EM 2 A 3 DIAS ÚTEIS</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Manifesto Section -->
+<section class="p-6 sm:p-8 md:p-24 border-t-2 border-primary-container grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 min-w-0">
+<div class="md:col-span-8 min-w-0">
+<h2 class="text-[clamp(2rem,6vw+0.5rem,6rem)] font-headline font-black text-primary uppercase tracking-tighter leading-[0.95] mb-8 md:mb-12 break-words hyphens-auto">
+                SOFTWARE COM<br/>ACABAMENTO<br/>HUMANO
+            </h2>
+</div>
+<div class="md:col-span-4 min-w-0 flex flex-col justify-end gap-4">
+<p class="text-on-surface font-body normal-case leading-relaxed text-base md:text-lg md:text-right break-words">
+                Desenvolvemos software com foco em estabilidade, clareza e uso contínuo.
+            </p>
+<p class="text-on-surface font-body normal-case leading-relaxed text-base md:text-lg md:text-right break-words">
+                Cada detalhe é construído com atenção e refinado com o tempo.
+            </p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#224225] text-primary font-mono text-[10px] uppercase tracking-widest border-t-2 border-primary w-full flex flex-col items-start px-8 py-12 gap-8">
+<div class="flex flex-col md:flex-row justify-between w-full items-start gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold text-lg font-headline">MOTA LABS LTDA</span>
+<p class="text-on-surface max-w-full md:max-w-md break-words">SOFTWARE COM ACABAMENTO HUMANO — ESTABILIDADE, CLAREZA E USO CONTÍNUO.</p>
+</div>
+<div class="flex flex-wrap gap-8 items-center">
+<a class="text-primary-container bg-primary-container/10 px-4 py-2 border border-primary hover:bg-primary-container/20 hover:text-on-primary transition-none" href="https://apps.apple.com/">
+                VER NA APP STORE
+            </a>
+<a class="text-primary underline hover:text-white" href="mailto:contato@motalabs.com.br">
+                E-MAIL DIRETO
+            </a>
+</div>
+</div>
+<div class="border-t border-primary-container/20 pt-8 w-full flex flex-col gap-6">
+<blockquote class="text-on-surface font-headline text-sm md:text-base normal-case tracking-normal leading-relaxed max-w-3xl border-l-2 border-primary pl-4 md:pl-6">
+<span class="text-primary-container/90">&ldquo;Se o Senhor não edificar a casa, em vão trabalham os que a edificam&rdquo;</span>
+<cite class="block mt-3 font-mono text-[10px] uppercase tracking-widest text-primary not-italic">SL 127</cite>
+</blockquote>
+<p>© 2026 MOTA LABS LTDA. TODOS OS DIREITOS RESERVADOS.</p>
+</div>
+</footer>
+</body></html>

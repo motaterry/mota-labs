@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-background text-primary;
+  }
+  /* Keyboard focus — plain CSS so production CSS always generates (avoids rare Tailwind @apply hiccups). */
+  a:focus-visible {
+    outline: 2px solid #f3797a;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .grid-overlay {
+    background-image: linear-gradient(to right, rgba(243, 121, 122, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(243, 121, 122, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
