@@ -46,13 +46,16 @@ jobs:
           REPO='${{ github.event.repository.name }}'
           if [ "$REPO" = "$OWNER.github.io" ]; then
             echo "path=" >> "$GITHUB_OUTPUT"
+            echo "site_url=https://$OWNER.github.io" >> "$GITHUB_OUTPUT"
           else
             echo "path=/$REPO" >> "$GITHUB_OUTPUT"
+            echo "site_url=https://$OWNER.github.io/$REPO" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Install and build
         env:
           BASE_PATH: ${{ steps.base.outputs.path }}
+          NEXT_PUBLIC_SITE_URL: ${{ steps.base.outputs.site_url }}
         run: |
           npm ci
           npm run build

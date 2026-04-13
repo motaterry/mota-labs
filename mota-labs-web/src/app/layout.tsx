@@ -2,6 +2,18 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 
+/** Absolute URLs for Open Graph / Twitter (required with static export). */
+function siteMetadataBase(): URL {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) {
+    return new URL(explicit.endsWith("/") ? explicit.slice(0, -1) : explicit);
+  }
+  if (process.env.VERCEL_URL) {
+    return new URL(`https://${process.env.VERCEL_URL}`);
+  }
+  return new URL("http://localhost:3333");
+}
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
@@ -15,8 +27,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: siteMetadataBase(),
   title: "MOTA LABS | Software com acabamento humano",
   description: "Desenvolvimento de artefatos para o ecossistema iOS e web. Alinhado ao eixo desde a concepção.",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "MOTA LABS",
+  },
 };
 
 export default function RootLayout({
