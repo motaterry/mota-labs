@@ -8,6 +8,7 @@ const basePath = process.env.BASE_PATH || "";
 // Static export → deploy the `out/` folder (not `.next`). Use `npm run start` to preview `out/`.
 const nextConfig = {
   output: "export",
+  trailingSlash: true,
   ...(basePath ? { basePath, assetPrefix: basePath } : {}),
   images: {
     unoptimized: true,
